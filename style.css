@@ -1,24 +1,10 @@
-.supporter-bar {
-    background-color: #ffcc00; 
-    color: #1a1a1a;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 0.9rem;
-    font-weight: bold;
-    border-bottom: 2px solid #e6b800;
-}
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
+/* Global Styles */
 :root {
     --primary: #0047ab;
+    --accent: #ffcc00;
     --dark: #1a1a1a;
     --light: #ffffff;
-    --grey: #f4f4f4;
+    --grey: #f8f9fa;
 }
 
 body {
@@ -26,22 +12,33 @@ body {
     margin: 0;
     line-height: 1.6;
     color: var(--dark);
+    scroll-behavior: smooth;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
+    width: 85%;
     max-width: 1100px;
+    margin: auto;
+}
+
+/* Supporter Bar */
+.supporter-bar {
+    background: var(--accent);
+    color: var(--dark);
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 700;
 }
 
 /* Navigation */
 nav {
     background: var(--light);
-    padding: 1rem 0;
-    border-bottom: 1px solid #ddd;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eee;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 nav .container {
@@ -50,30 +47,42 @@ nav .container {
     align-items: center;
 }
 
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: -0.5px;
+}
+
 nav ul {
-    display: flex;
     list-style: none;
+    display: flex;
     margin: 0;
 }
 
-nav ul li { margin-left: 20px; }
+nav ul li { margin-left: 25px; }
 
 nav a {
     text-decoration: none;
     color: var(--dark);
-    font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.3s;
 }
 
-/* Hero Section */
+nav a:hover { color: var(--primary); }
+
+/* Hero */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000'); /* Cyber security background */
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                url('https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=2000');
     background-size: cover;
+    background-position: center;
     color: white;
-    padding: 100px 0;
+    padding: 120px 0;
     text-align: center;
 }
 
-.hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+.subtitle { font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem; }
 
 /* Sections */
 .section { padding: 80px 0; }
@@ -81,41 +90,57 @@ nav a {
 .grey { background: var(--grey); }
 .blue { background: var(--primary); color: white; text-align: center; }
 
+h2 { font-size: 2.2rem; margin-bottom: 1.5rem; }
+
+/* Cards */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .card {
-    background: #333;
-    padding: 20px;
-    border-radius: 8px;
+    background: #252525;
+    padding: 30px;
+    border-radius: 12px;
+    border-top: 4px solid var(--primary);
 }
 
-.cta-button {
-    background: #e63946;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 20px;
-    border: none;
-    cursor: pointer;
-}
+.card h3 { margin-top: 0; color: var(--accent); }
 
+/* Rebuttal Box */
 .rebuttal-box {
     background: white;
-    padding: 30px;
-    border-left: 5px solid var(--primary);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-left: 6px solid var(--primary);
+}
+
+/* Buttons */
+.cta-button {
+    background: var(--accent);
+    color: var(--dark);
+    padding: 16px 32px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.cta-button:hover {
+    background: #f0c000;
+    transform: translateY(-2px);
 }
 
 footer {
-    text-align: center;
     padding: 40px 0;
-    background: #111;
-    color: white;
+    background: #0a0a0a;
+    color: #666;
+    text-align: center;
+    font-size: 0.8rem;
 }
