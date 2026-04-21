@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Privacy Regulations | Protect Your Future</title>
+    <title>AI Privacy Regulations | Digital Sovereignty</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
 
     <div class="supporter-bar">
         <div class="container">
-            <span>📢 <strong>Supported by:</strong> 2,451,083 citizens and counting</span>
+            <span>📢 Current Global Support: <strong id="counter">2,451,083</strong></span>
         </div>
     </div>
 
@@ -20,10 +20,9 @@
         <div class="container">
             <span class="logo">AI Privacy Act</span>
             <ul>
-                <li><a href="#problem">The Problem</a></li>
-                <li><a href="#rules">Rules</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#voters">Support Us</a></li>
+                <li><a href="#landscape">Landscape</a></li>
+                <li><a href="#framework">Framework</a></li>
+                <li><a href="#sovereignty">Sovereignty</a></li>
             </ul>
         </div>
     </nav>
@@ -31,71 +30,93 @@
     <header class="hero">
         <div class="container">
             <h1>AI Privacy Regulations</h1>
-            <p class="subtitle">Ensuring "Explicit Consent" in the Age of Automation.</p>
-            <button id="supportBtn" class="cta-button">Support the Act</button>
+            <p class="subtitle">Ensuring explicit consent is the standard for automated data processing.</p>
+            <button class="cta-button support-btn">Support the Act</button>
         </div>
     </header>
 
-    <section id="problem" class="section">
+    <section id="landscape" class="section">
         <div class="container">
-            <h2>The Factual Problem: Data Scraping & Monitoring</h2>
-            <p>Modern AI systems are often trained on "Dark Data"—information scraped from the web without user knowledge or consent. According to recent 2025 privacy reports, AI-driven workplace monitoring and biometric inferences (tracking your voice and behavior) have become standard, often bypassing traditional privacy settings.</p>
-            <p>Our law solves this by mandating that <strong>AI should not access personal information that is not explicitly given by a user.</strong></p>
+            <h2>The Scope of Automated Processing</h2>
+            <p>Modern AI systems often utilize "inferred data collection"—the practice of generating profiles on citizens based on information they never consciously provided. This regulation establishes a necessary boundary: <strong>AI should not access personal information that is not explicitly given by a user.</strong></p>
         </div>
     </section>
 
-    <section id="rules" class="section dark">
+    <section id="framework" class="section dark">
         <div class="container">
-            <h2>The Three Pillars of the Regulation</h2>
+            <h2>Proposed Regulatory Framework</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>1. Data Minimization</h3>
-                    <p>AI models must only process the specific data required for the task. No "bulk" collection of citizen data for unspecified future use.</p>
+                    <h3>Surveillance Limits</h3>
+                    <p>Prohibits AI from being used for persistent mass surveillance or the unauthorized collection of biometric data in public spaces.</p>
                 </div>
                 <div class="card">
-                    <h3>2. Anti-Surveillance</h3>
-                    <p>Strictly prohibits AI from being used for mass public surveillance, facial recognition tracking in private spaces, or state-level espionage.</p>
+                    <h3>Protection of Privacy</h3>
+                    <p>Prevents AI applications from serving as tools for domestic espionage or the unsolicited gathering of citizen communications.</p>
                 </div>
                 <div class="card">
-                    <h3>3. The Right to Opt-In</h3>
-                    <p>Aligning with the 2026 EU AI Act standards, users must provide affirmative, explicit consent before their data is used for AI training.</p>
+                    <h3>Affirmative Consent</h3>
+                    <p>Mandates that all AI data training must be based on explicit, verifiable user opt-ins rather than automated scraping.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="rebuttal" class="section grey">
+    <section id="policy" class="section grey">
         <div class="container">
-            <h2>Addressing the Innovation Myth</h2>
+            <h2>Policy and Innovation</h2>
             <div class="rebuttal-box">
-                <p><strong>Criticism:</strong> "We need AI to manage private info for hospitals and anti-terrorism to stay competitive."</p>
-                <p><strong>The Factual Reality:</strong> This law does not ban AI; it mandates <strong>Privacy by Design</strong>. In fact, Pew Research (2025) shows that 80% of citizens are more likely to use AI tools if they know their data is protected. By ensuring consent, we build <em>trust</em>, which actually accelerates the adoption of AI in healthcare and public safety without turning into a dystopian reality like Orwell's <em>1984</em>.</p>
+                <p><em>"Does this hinder the efficacy of AI in critical sectors like healthcare or public safety?"</em></p>
+                <p><strong>Analysis:</strong> This regulation is focused on <strong>unsolicited access</strong>. It does not prevent AI from managing data that is voluntarily submitted for medical or security purposes. By establishing high privacy standards, we foster the trust necessary for sustainable technological adoption without compromising individual liberty.</p>
             </div>
         </div>
     </section>
 
-    <section id="voters" class="section blue">
+    <section id="sovereignty" class="section blue">
         <div class="container">
-            <h2>Why Voters Stand With Us</h2>
-            <p>Privacy is a fundamental right. Without regulation, we risk a world where every movement, purchase, and private conversation is "learned" by an algorithm for the benefit of a few corporations or government entities.</p>
-            <button id="supportBtnBottom" class="cta-button">Sign the Petition</button>
+            <h2>The Argument for Digital Sovereignty</h2>
+            <p>Privacy is a prerequisite for a free society. Without clear regulations, we risk establishing systems of automated oversight that mirror the surveillance risks historically noted in mid-20th-century literature. Protecting explicit consent ensures that citizens, not algorithms, remain in control of their digital lives.</p>
+            <button class="cta-button support-btn">Add Your Support</button>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 AI Privacy Advocacy Group. | Verified Fact-Based Advocacy</p>
+        <p>&copy; 2026 AI Privacy Advocacy Group. | Built for Ethical Progress</p>
     </footer>
 
     <script>
-        // This function makes the popup appear
-        function showThankYou() {
-            alert("Thank you for your support! You've been added to our list of citizens advocating for a safer AI future.");
+        // Set a base number
+        let baseCount = 2451083;
+        const counterDisplay = document.getElementById('counter');
+
+        // Check if the user has supported before in this browser
+        let hasSupported = localStorage.getItem('userSupported') === 'true';
+
+        // Update the display initially
+        function updateDisplay() {
+            // If they already supported, we add 1 to the base count
+            let displayNum = hasSupported ? baseCount + 1 : baseCount;
+            counterDisplay.innerText = displayNum.toLocaleString();
         }
 
-        // We attach the function to both buttons
-        document.getElementById("supportBtn").onclick = showThankYou;
-        document.getElementById("supportBtnBottom").onclick = showThankYou;
-    </script>
+        // Handle the button click
+        function handleSupport() {
+            if (!hasSupported) {
+                hasSupported = true;
+                localStorage.setItem('userSupported', 'true');
+                updateDisplay();
+                alert("Thank you for your support! You have been added to the digital sovereignty registry.");
+            } else {
+                alert("You have already registered your support. Thank you for standing with us!");
+            }
+        }
 
+        // Link buttons to the script
+        const buttons = document.querySelectorAll('.support-btn');
+        buttons.forEach(btn => btn.addEventListener('click', handleSupport));
+
+        // Initial run
+        updateDisplay();
+    </script>
 </body>
 </html>
