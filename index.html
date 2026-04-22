@@ -3,244 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Privacy Regulations | Advocacy for Digital Integrity</title>
+    <title>The AI Privacy Act | 2026 Regulatory Framework</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary: #003366; /* Deeper, more professional blue */
-            --accent: #ffcb05; /* Gold accent */
-            --text-main: #1a1a1a;
-            --text-muted: #4a4a4a;
-            --bg-light: #ffffff;
-            --bg-alt: #f4f7f9;
-            --bg-dark: #0f172a;
+            --primary-blue: #0a192f;
+            --accent-gold: #c5a059;
+            --pure-white: #ffffff;
+            --smoke: #f8f9fa;
+            --text-black: #121212;
+            --text-grey: #444444;
         }
 
-        * {
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-        }
+        * { box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif; /* Clean, modern body text */
             margin: 0;
-            line-height: 1.7; /* Increased for better readability */
-            color: var(--text-main);
-            background-color: var(--bg-light);
-            scroll-behavior: smooth;
+            line-height: 1.8;
+            color: var(--text-black);
+            background-color: var(--pure-white);
+            font-size: 18px; /* Noticeably larger base font */
         }
 
-        .container { width: 90%; max-width: 1000px; margin: auto; }
-
-        /* Supporter Bar - More subtle ticker style */
+        /* 1. SUPPORTER BAR - Now bold and high-contrast */
         .supporter-bar {
-            background: var(--bg-dark);
-            color: white;
-            padding: 8px 0;
+            background: var(--primary-blue);
+            color: var(--accent-gold);
+            padding: 12px 0;
             text-align: center;
-            font-size: 0.8rem;
-            font-weight: 500;
-            letter-spacing: 0.05rem;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
             text-transform: uppercase;
+            border-bottom: 2px solid var(--accent-gold);
         }
 
-        #counter { color: var(--accent); font-weight: 700; }
-
-        /* Navigation */
+        /* 2. NAVIGATION */
         nav {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 1.2rem 0;
-            border-bottom: 1px solid #eaeaea;
+            padding: 2rem 0;
+            background: white;
+            border-bottom: 1px solid #eee;
             position: sticky;
             top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
+            z-index: 100;
         }
 
-        nav .container { display: flex; justify-content: space-between; align-items: center; }
-        
-        .logo { 
-            font-weight: 800; 
-            font-size: 1.1rem; 
-            letter-spacing: -0.02rem;
-            color: var(--primary);
-            text-transform: uppercase;
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
         }
 
-        nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
-        nav ul li { margin-left: 30px; }
-        nav a { 
-            text-decoration: none; 
-            color: var(--text-muted); 
-            font-weight: 600; 
-            font-size: 0.85rem; 
-            transition: 0.2s;
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--primary-blue);
+            text-decoration: none;
         }
-        nav a:hover { color: var(--primary); }
 
-        /* Hero Section */
+        nav ul { list-style: none; display: flex; gap: 40px; margin: 0; padding: 0; }
+        nav a { text-decoration: none; color: var(--text-grey); font-weight: 600; font-size: 0.9rem; }
+        nav a:hover { color: var(--accent-gold); }
+
+        /* 3. HERO SECTION - Massive and Authoritative */
         .hero {
-            padding: 120px 0;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
+            padding: 160px 0;
+            background: var(--smoke);
             text-align: center;
+            border-bottom: 1px solid #ddd;
         }
 
-        .hero h1 { 
-            font-size: clamp(2.5rem, 5vw, 3.8rem); /* Fluid font size */
-            font-weight: 800; 
-            letter-spacing: -0.04rem;
-            margin-bottom: 1.5rem;
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem; /* Noticeably larger H1 */
             line-height: 1.1;
+            margin: 0 0 30px 0;
+            color: var(--primary-blue);
         }
 
-        .subtitle { 
-            font-size: 1.15rem; 
+        .hero p {
+            font-size: 1.4rem;
+            color: var(--text-grey);
+            max-width: 800px;
+            margin: 0 auto 50px auto;
             font-weight: 400;
-            max-width: 700px;
-            margin: 0 auto 2.5rem auto;
-            color: #94a3b8;
         }
 
-        /* Sections */
-        .section { padding: 100px 0; }
-        h2 { 
-            font-size: 2rem; 
-            font-weight: 700; 
-            letter-spacing: -0.02rem; 
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-
-        p { font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--text-muted); }
-
-        .grey-section { background-color: var(--bg-alt); }
-
-        /* Rule Cards */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        
-        .card { 
-            background: white; 
-            padding: 40px; 
-            border-radius: 12px; 
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease;
-        }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .card h3 { font-size: 1.25rem; font-weight: 700; margin-top: 0; color: var(--primary); }
-        .card p { font-size: 0.95rem; margin-bottom: 0; }
-
-        /* Rebuttal Box */
-        .rebuttal-box {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 16px;
-            border-left: 4px solid var(--primary);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-        }
-        .rebuttal-box strong { color: var(--primary); font-weight: 700; }
-
-        /* Buttons */
+        /* 4. BUTTONS - Larger and more clickable */
         .cta-button {
-            background-color: var(--primary);
+            background: var(--primary-blue);
             color: white;
-            padding: 16px 36px;
+            padding: 22px 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
             border: none;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 0.95rem;
             cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 4px 12px rgba(0, 51, 102, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
         }
 
-        .cta-button:hover { background-color: #002244; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 51, 102, 0.3); }
-        
-        .secondary-btn { background-color: var(--accent); color: var(--primary); box-shadow: none; }
-        .secondary-btn:hover { background-color: #f2c104; box-shadow: 0 6px 20px rgba(255, 203, 5, 0.3); }
+        .cta-button:hover {
+            background: var(--accent-gold);
+            color: var(--primary-blue);
+            transform: translateY(-3px);
+        }
 
-        footer { padding: 60px 0; background: var(--bg-dark); color: #64748b; text-align: center; font-size: 0.85rem; }
+        /* 5. CONTENT SECTIONS */
+        .section { padding: 120px 0; width: 90%; max-width: 900px; margin: auto; }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem; /* Huge H2 */
+            margin-bottom: 40px;
+            color: var(--primary-blue);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .card {
+            border-left: 2px solid var(--accent-gold);
+            padding-left: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin: 0 0 15px 0;
+        }
+
+        /* 6. REBUTTAL BOX - Modern and clean */
+        .rebuttal {
+            background: var(--primary-blue);
+            color: white;
+            padding: 60px;
+            margin: 80px 0;
+        }
+
+        .rebuttal p { color: #cbd5e1; font-size: 1.2rem; }
+        .rebuttal strong { color: var(--accent-gold); display: block; font-size: 1.5rem; margin-bottom: 10px; }
+
+        footer {
+            text-align: center;
+            padding: 80px 0;
+            background: white;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            color: #888;
+        }
     </style>
 </head>
 <body>
 
     <div class="supporter-bar">
-        <div class="container">
-            Live Support Count: <span id="counter">2,451,083</span> Verified Citizens
-        </div>
+        Registered Supporters: <span id="counter">2,451,083</span>
     </div>
 
     <nav>
         <div class="container">
-            <div class="logo">Privacy Act</div>
+            <a href="#" class="logo">AI Privacy Act</a>
             <ul>
-                <li><a href="#landscape">Framework</a></li>
-                <li><a href="#rules">Regulations</a></li>
-                <li><a href="#action">Take Action</a></li>
+                <li><a href="#landscape">The Mandate</a></li>
+                <li><a href="#framework">The Framework</a></li>
+                <li><a href="#support">Join Us</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container">
-            <h1>The Future of Digital Autonomy.</h1>
-            <p class="subtitle">Ensuring explicit consent remains the standard for all automated data processing and AI integration.</p>
-            <button class="cta-button secondary-btn support-btn">Support the Framework</button>
+            <h1>Sovereignty Over <br>Personal Data.</h1>
+            <p>Codifying the requirement for explicit user consent in all automated data processing systems.</p>
+            <button class="cta-button support-btn">Support the Act</button>
         </div>
     </header>
 
     <section id="landscape" class="section">
-        <div class="container">
-            <h2>The Landscape of Modern Data</h2>
-            <p>In an increasingly automated environment, the boundary between public and private information has blurred. This regulation codifies a necessary standard: <strong>AI should not access personal information that is not explicitly given by a user.</strong></p>
-            <p>By addressing unsolicited data processing at the source, we protect citizens from non-consensual profiling while fostering a climate of ethical innovation.</p>
-        </div>
+        <h2>The Digital Mandate</h2>
+        <p>As artificial intelligence becomes increasingly integrated into the social fabric, the preservation of individual autonomy is paramount. Our proposal is built on a singular, clean principle: <strong>AI should not access personal information that is not explicitly given by a user.</strong></p>
+        <p>By enforcing this standard, we move away from "presumed consent" and toward a future where every interaction is intentional and verified.</p>
     </section>
 
-    <section id="rules" class="section grey-section">
-        <div class="container">
-            <h2>The Regulatory Framework</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Integrity Standards</h3>
-                    <p>Prevents AI applications from serving as tools for domestic espionage or the unsolicited gathering of private communications.</p>
-                </div>
-                <div class="card">
-                    <h3>Surveillance Oversight</h3>
-                    <p>Restricts the deployment of persistent AI-driven mass surveillance and unauthorized biometric tracking in public squares.</p>
-                </div>
-                <div class="card">
-                    <h3>Transparency Mandates</h3>
-                    <p>Requires verifiable, affirmative consent before any personal data is utilized for model training or behavioral analysis.</p>
-                </div>
+    <section id="framework" class="section" style="background: white;">
+        <h2>The Framework</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Surveillance</h3>
+                <p>Establishing clear prohibitions against AI-driven mass surveillance and the unauthorized collection of public biometric data.</p>
+            </div>
+            <div class="card">
+                <h3>Espionage</h3>
+                <p>Preventing the use of automated systems as tools for domestic espionage or the unsolicited tracking of private communications.</p>
+            </div>
+            <div class="card">
+                <h3>Consent</h3>
+                <p>Moving the legal burden to data processors to secure affirmative, verifiable consent before any citizen data is utilized.</p>
+            </div>
+            <div class="card">
+                <h3>Integrity</h3>
+                <p>Ensuring that the growth of AI technology does not outpace the fundamental rights of the individuals it aims to serve.</p>
             </div>
         </div>
     </section>
 
-    <section class="section">
-        <div class="container">
-            <div class="rebuttal-box">
-                <p><strong>A Perspective on Public Safety:</strong></p>
-                <p>Critics suggest that privacy standards may hinder critical services. However, professional data analysis indicates that <em>explicitly provided</em> data is higher in quality and reliability. By focusing on voluntarily submitted information, public institutions can leverage AI with higher precision and greater public trust.</p>
-            </div>
+    <div class="rebuttal">
+        <div class="container" style="max-width: 800px; margin: auto;">
+            <strong>A Note on Public Interest</strong>
+            <p>Professional assessment indicates that privacy regulations do not hinder public safety; they improve it. By ensuring that AI only processes data that is explicitly provided, we increase the accuracy of systems in healthcare and law enforcement while maintaining the public trust necessary for innovation.</p>
         </div>
-    </section>
+    </div>
 
-    <section id="action" class="section" style="text-align: center; border-top: 1px solid #eee;">
-        <div class="container">
-            <h2>Stand for Digital Sovereignty</h2>
-            <p style="max-width: 700px; margin-left: auto; margin-right: auto;">Protecting explicit consent ensures that citizens, not algorithms, remain the architects of their digital footprint. Join the movement to secure a balanced, private future.</p>
-            <br>
-            <button class="cta-button support-btn">Sign the Digital Petition</button>
-        </div>
+    <section id="support" class="section" style="text-align: center;">
+        <h2>Take Action.</h2>
+        <p>Securing digital privacy is the definitive civil rights challenge of the 2020s. We invite you to stand with millions of citizens in advocating for a balanced, human-centric future.</p>
+        <button class="cta-button support-btn">Sign the Support Petition</button>
     </section>
 
     <footer>
-        <p>&copy; 2026 AI Privacy Advocacy | Promoting Ethical Standards in Technology</p>
+        &copy; 2026 AI Privacy Advocacy | Promoting Ethical Innovation
     </footer>
 
     <script>
@@ -248,31 +243,34 @@
         const counterElement = document.getElementById('counter');
         let userHasSupported = localStorage.getItem('hasSupported') === 'true';
 
-        function getLiveCount() {
+        function updateCounter() {
             let now = new Date();
-            let minutesPassed = (now.getHours() * 60) + now.getMinutes();
-            let liveGrowth = minutesPassed * 2; 
-            let finalCount = baseNumber + liveGrowth;
-            if (userHasSupported) finalCount += 1;
-            counterElement.innerText = finalCount.toLocaleString();
+            let minutesThisDay = (now.getHours() * 60) + now.getMinutes();
+            let simulatedGrowth = Math.floor(minutesThisDay * 2.5); // 2.5 new supporters every minute
+            
+            let displayCount = baseNumber + simulatedGrowth;
+            if (userHasSupported) displayCount += 1;
+            
+            counterElement.innerText = displayCount.toLocaleString();
         }
 
         function handleSupport() {
             if (!userHasSupported) {
                 userHasSupported = true;
                 localStorage.setItem('hasSupported', 'true');
-                getLiveCount();
-                alert("Thank you for supporting digital integrity. Your voice has been recorded.");
+                updateCounter();
+                alert("Thank you. Your support for the AI Privacy Act has been recorded.");
             } else {
-                alert("Our records show you have already supported this initiative. Thank you for your commitment.");
+                alert("Thank you for your continued support. You have already registered for this session.");
             }
         }
 
         const buttons = document.querySelectorAll('.support-btn');
         buttons.forEach(btn => btn.addEventListener('click', handleSupport));
 
-        getLiveCount();
-        setInterval(getLiveCount, 15000);
+        // Initial update and live interval
+        updateCounter();
+        setInterval(updateCounter, 10000); // Update every 10 seconds
     </script>
 
 </body>
