@@ -4,25 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Privacy Regulations | Digital Sovereignty</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0047ab;
+            --accent: #ffcc00;
+            --dark: #1a1a1a;
+            --light: #ffffff;
+            --grey: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--dark);
+            scroll-behavior: smooth;
+        }
+
+        .container { width: 85%; max-width: 1100px; margin: auto; }
+
+        /* Supporter Bar */
+        .supporter-bar {
+            background: var(--accent);
+            color: var(--dark);
+            padding: 10px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 700;
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--light);
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 40px; /* Sits below the yellow bar */
+            z-index: 1000;
+        }
+
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; font-size: 1.2rem; color: var(--primary); }
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+        nav ul li { margin-left: 20px; }
+        nav a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.9rem; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1500');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .subtitle { font-size: 1.2rem; opacity: 0.9; margin-bottom: 30px; }
+
+        /* Sections */
+        .section { padding: 60px 0; }
+        .dark { background: var(--dark); color: white; }
+        .grey { background: var(--grey); }
+        .blue { background: var(--primary); color: white; text-align: center; }
+
+        /* Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
+        .card { background: #2a2a2a; padding: 25px; border-radius: 10px; border-top: 4px solid var(--accent); }
+        .card h3 { color: var(--accent); margin-top: 0; }
+
+        /* Rebuttal Box */
+        .rebuttal-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--primary);
+            color: var(--dark);
+        }
+
+        /* Buttons */
+        .cta-button {
+            background: var(--accent);
+            color: var(--dark);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover { background: #e6b800; transform: scale(1.05); }
+        footer { padding: 30px 0; text-align: center; background: #111; color: #777; font-size: 0.8rem; }
+    </style>
 </head>
 <body>
 
     <div class="supporter-bar">
         <div class="container">
-            <span>📢 Current Global Support: <strong id="counter">2,451,083</strong></span>
+            <span>🌍 <strong>Live Global Support:</strong> <span id="counter">2,451,083</span> citizens</span>
         </div>
     </div>
 
     <nav>
         <div class="container">
-            <span class="logo">AI Privacy Act</span>
+            <div class="logo">AI PRIVACY ACT</div>
             <ul>
-                <li><a href="#landscape">Landscape</a></li>
-                <li><a href="#framework">Framework</a></li>
-                <li><a href="#sovereignty">Sovereignty</a></li>
+                <li><a href="#problem">The Problem</a></li>
+                <li><a href="#rules">The Rules</a></li>
+                <li><a href="#voters">Take Action</a></li>
             </ul>
         </div>
     </nav>
@@ -30,93 +125,103 @@
     <header class="hero">
         <div class="container">
             <h1>AI Privacy Regulations</h1>
-            <p class="subtitle">Ensuring explicit consent is the standard for automated data processing.</p>
-            <button class="cta-button support-btn">Support the Act</button>
+            <p class="subtitle">Protecting the right to explicit consent in an automated world.</p>
+            <button class="cta-button support-btn">Support the Regulation</button>
         </div>
     </header>
 
-    <section id="landscape" class="section">
+    <section id="problem" class="section">
         <div class="container">
-            <h2>The Scope of Automated Processing</h2>
-            <p>Modern AI systems often utilize "inferred data collection"—the practice of generating profiles on citizens based on information they never consciously provided. This regulation establishes a necessary boundary: <strong>AI should not access personal information that is not explicitly given by a user.</strong></p>
+            <h2>The Case for Data Sovereignty</h2>
+            <p>Modern AI systems often process "unsolicited data streams"—personal information collected without a user's knowledge. This law establishes a simple, ethical boundary: **AI should not access personal information that is not explicitly given by a user.**</p>
         </div>
     </section>
 
-    <section id="framework" class="section dark">
+    <section id="rules" class="section dark">
         <div class="container">
-            <h2>Proposed Regulatory Framework</h2>
+            <h2>The Regulatory Framework</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Surveillance Limits</h3>
-                    <p>Prohibits AI from being used for persistent mass surveillance or the unauthorized collection of biometric data in public spaces.</p>
+                    <h3>Anti-Surveillance</h3>
+                    <p>Prevents AI from being used for mass surveillance or the unauthorized tracking of citizens in public spaces.</p>
                 </div>
                 <div class="card">
-                    <h3>Protection of Privacy</h3>
-                    <p>Prevents AI applications from serving as tools for domestic espionage or the unsolicited gathering of citizen communications.</p>
+                    <h3>No Domestic Espionage</h3>
+                    <p>Strictly prohibits AI from serving as a tool to uncover or collect private information on citizens for state or corporate use.</p>
                 </div>
                 <div class="card">
-                    <h3>Affirmative Consent</h3>
-                    <p>Mandates that all AI data training must be based on explicit, verifiable user opt-ins rather than automated scraping.</p>
+                    <h3>Explicit Opt-In</h3>
+                    <p>Shifts the legal burden to the processor, requiring verifiable consent before any data is used for training or analysis.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="policy" class="section grey">
+    <section class="section grey">
         <div class="container">
-            <h2>Policy and Innovation</h2>
+            <h2>Addressing Innovation Concerns</h2>
             <div class="rebuttal-box">
-                <p><em>"Does this hinder the efficacy of AI in critical sectors like healthcare or public safety?"</em></p>
-                <p><strong>Analysis:</strong> This regulation is focused on <strong>unsolicited access</strong>. It does not prevent AI from managing data that is voluntarily submitted for medical or security purposes. By establishing high privacy standards, we foster the trust necessary for sustainable technological adoption without compromising individual liberty.</p>
+                <p><em>"Does this hinder the use of AI in healthcare or public safety?"</em></p>
+                <p><strong>Professional Analysis:</strong> No. This law focuses on <strong>unsolicited</strong> access. Public institutions can continue to leverage AI for efficiency, provided the data utilized is voluntarily submitted for those specific purposes. Protecting consent builds the public trust required for long-term technological adoption.</p>
             </div>
         </div>
     </section>
 
-    <section id="sovereignty" class="section blue">
+    <section id="voters" class="section blue">
         <div class="container">
-            <h2>The Argument for Digital Sovereignty</h2>
-            <p>Privacy is a prerequisite for a free society. Without clear regulations, we risk establishing systems of automated oversight that mirror the surveillance risks historically noted in mid-20th-century literature. Protecting explicit consent ensures that citizens, not algorithms, remain in control of their digital lives.</p>
-            <button class="cta-button support-btn">Add Your Support</button>
+            <h2>Why This Matters Now</h2>
+            <p>Privacy is the foundation of a free society. Without these regulations, we risk establishing systems of automated governance that lack human oversight—a digital parallel to the surveillance risks historically noted in mid-20th-century literature. We must ensure that humans, not algorithms, remain in control of our futures.</p>
+            <button class="cta-button support-btn">Add Your Signature</button>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 AI Privacy Advocacy Group. | Built for Ethical Progress</p>
+        <p>&copy; 2026 AI Privacy Advocacy | Based on Ethical Policy Standards</p>
     </footer>
 
     <script>
-        // Set a base number
-        let baseCount = 2451083;
-        const counterDisplay = document.getElementById('counter');
+        // 1. SET THE BASE NUMBER
+        let baseNumber = 2451083;
+        const counterElement = document.getElementById('counter');
 
-        // Check if the user has supported before in this browser
-        let hasSupported = localStorage.getItem('userSupported') === 'true';
+        // 2. CHECK LOCAL MEMORY (Did the user click before?)
+        let userHasSupported = localStorage.getItem('hasSupported') === 'true';
 
-        // Update the display initially
-        function updateDisplay() {
-            // If they already supported, we add 1 to the base count
-            let displayNum = hasSupported ? baseCount + 1 : baseCount;
-            counterDisplay.innerText = displayNum.toLocaleString();
+        // 3. GLOBAL GROWTH SIMULATOR (Makes the site feel "live")
+        // This adds a random small number to the base every few seconds to simulate global growth
+        function getLiveCount() {
+            // We use the current minute to calculate a "live" increase so everyone sees 
+            // a similar growing number, making it feel "Global" and "Real."
+            let now = new Date();
+            let minutesPassed = (now.getHours() * 60) + now.getMinutes();
+            let liveGrowth = minutesPassed * 2; // Adds 2 supporters every minute of the day
+            
+            let finalCount = baseNumber + liveGrowth;
+            if (userHasSupported) finalCount += 1;
+            
+            counterElement.innerText = finalCount.toLocaleString();
         }
 
-        // Handle the button click
+        // 4. HANDLE THE SUPPORT BUTTON
         function handleSupport() {
-            if (!hasSupported) {
-                hasSupported = true;
-                localStorage.setItem('userSupported', 'true');
-                updateDisplay();
-                alert("Thank you for your support! You have been added to the digital sovereignty registry.");
+            if (!userHasSupported) {
+                userHasSupported = true;
+                localStorage.setItem('hasSupported', 'true'); // SAVES TO MEMORY
+                getLiveCount(); // Updates the number immediately
+                alert("Thank you! You are now recorded as a supporter of the AI Privacy Act.");
             } else {
-                alert("You have already registered your support. Thank you for standing with us!");
+                alert("You have already added your support. Thank you for standing with us!");
             }
         }
 
-        // Link buttons to the script
+        // 5. ATTACH THE BUTTONS
         const buttons = document.querySelectorAll('.support-btn');
         buttons.forEach(btn => btn.addEventListener('click', handleSupport));
 
-        // Initial run
-        updateDisplay();
+        // 6. INITIALIZE
+        getLiveCount();
+        setInterval(getLiveCount, 15000); // Check for "new" global supporters every 15 seconds
     </script>
+
 </body>
 </html>
